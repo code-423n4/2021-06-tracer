@@ -23,7 +23,7 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 - [ ] Delete this checklist.
 
 
-## ⭐️ Sponsor: Contest prep
+## ⭐️ Tracer: Contest prep
 Under "Contest scope information" below, include the following:
 
 - [ ] Name of each contract and:
