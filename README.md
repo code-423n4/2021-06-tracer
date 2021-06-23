@@ -60,3 +60,10 @@ While there is no novel maths present, an understanding of the Tracer perpetual 
 
 ## Tokens
 All tokens used within the Tracer perpetual swaps system are assumed to conform to the ERC20 standard.
+
+## Security Assumptions
+Our security assumptions for the Tracer perpetual swaps contracts are that each market is manipulatable by the owner / deployer of the market, but there should be no cross market manipulation or exploits of any kind. There is no oracle or token whitelisting to ensure that anyone can deploy any market that they want, without restrictions of the protocol getting in their way. This comes with the tradeoff that the deployer of a market can deploy using an oracle they control, and manipulate the price to have the market behave in any way they wish.
+
+We have however provided adapters for Chainlink oracles, and will have DAO deployed markets (owned and managed by the Tracer DAO) that will use both reliable Chainlink oracles and safe underlying ERC20s.
+
+As such, exploits that are executable by the owner of a market (such as changing the oracle at any point in time, using an ERC20 with a dangerous implementation of `transfer`, etc) are out of scope for this audit.
